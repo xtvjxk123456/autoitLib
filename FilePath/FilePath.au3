@@ -7,3 +7,10 @@ Func dirname($path)
 	local $dirname = _PathMake($drive,$dir,'','')
 	Return $dirname
 EndFunc
+
+Func basename($path)
+	Local $drive='',$dir ='',$name='',$ext=''
+	_PathSplit($path,$drive,$dir,$name,$ext)
+	Local $basename = $name&$ext
+	Return $basename
+EndFunc
